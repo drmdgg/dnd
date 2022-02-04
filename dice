@@ -3,7 +3,6 @@ long answer;
 String response;
 String msg="ROLL QUANTITY?";
 String msg2="DIE TYPE?";
-String msg3="YOU ROLLED ";
 
 void setup() {
   // put your setup code here, to run once:
