@@ -1,0 +1,30 @@
+float RQ;
+long answer;
+String response;
+String msg="ROLL QUANTITY?";
+String msg2="DIE TYPE?";
+String msg3="YOU ROLLED ";
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:\
+  
+Serial.println(msg);
+while (Serial.available()==0) {
+}
+RQ=Serial.parseFloat();
+Serial.println(msg2);
+
+while (Serial.available()==0) {
+}
+response=Serial.readString();
+if (response=="d100") {
+answer=random(1, 100);
+}
+Serial.println(answer);
+
+}
